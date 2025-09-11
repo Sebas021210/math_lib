@@ -5,13 +5,15 @@ def square(n):
     return n * n
 
 def factorial(n):
-    """Versión incorrecta para demo: devuelve n en vez de n!"""
+    """Retorna el factorial de un número para enteros positivos. TypeError si n no es int; ValueError si n < 0."""
     if not isinstance(n, int):
         raise TypeError("factorial: n debe ser un entero")
     if n < 0:
         raise ValueError("factorial: n debe ser >= 0")
-    # BUG intencional: en lugar de calcular el factorial, devuelve n
-    return n
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result * 2
 
 def is_prime(n):
     """Retorna True si un número es primo, False si no. TypeError si n no es int."""
