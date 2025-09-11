@@ -13,7 +13,7 @@ def factorial(n):
     result = 1
     for i in range(2, n + 1):
         result *= i
-    return result * 2
+    return result
 
 def is_prime(n):
     """Retorna True si un número es primo, False si no. TypeError si n no es int."""
