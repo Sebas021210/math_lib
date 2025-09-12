@@ -6,6 +6,7 @@ def square(n):
 
 def factorial(n):
     """Retorna el factorial de un número para enteros positivos. TypeError si n no es int; ValueError si n < 0."""
+    """Función sin errores."""
     if not isinstance(n, int):
         raise TypeError("factorial: n debe ser un entero")
     if n < 0:
